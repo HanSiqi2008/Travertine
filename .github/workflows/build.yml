@@ -28,3 +28,10 @@ jobs:
           ./travertine p
       - name: build
         run: mvn clean javadoc:javadoc package
+
+      - name: Upload Artifacts 
+        uses: actions/upload-artifact@v4
+        with:
+          name: Artifact
+          path: Travertine-Proxy/bootstrap/target/*
+
